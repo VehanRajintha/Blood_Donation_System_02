@@ -37,16 +37,11 @@
 
 [<img src="https://firebasestorage.googleapis.com/v0/b/vehan-5008a.appspot.com/o/mediafire-logo-transparent.png?alt=media&token=d196347c-31d4-409a-8dd8-a573b0e5149a"
     alt="Get it on Mediafire"
-    height="80">](https://www.mediafire.com/file/7sp98ilql50gcs7/Blood_Donation_System.zip/file)
+    height="80">](https://www.mediafire.com/file/0ovp3sj9i873zsj/Blood_Donation_System_02.zip/file)
 
 
 
 ## Screenshots
 
-![pic1](pic1.jpg)
-![pic2](pic2.jpg)
-![pic3](pic3.jpg)
-![pic4](pic4.jpg)
-![pic5](pic5.jpg)
-![pic6](pic6.jpg)
-![pic7](pic7.jpg)
+![picc1](picc1.png)
+![picc2](picc2.png)
