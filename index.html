@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .slider {
+            position: relative;
+            overflow: hidden;
+            height: 400px; /* Adjust height as needed */
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 1s ease-in-out; /* Smooth transition */
+        }
+
+        .slide {
+            min-width: 100%; /* Each slide takes full width */
+            height: 100%;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 20px;
+            min-width: 250px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        .footer-section ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: #f0a500;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #f0a500;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+        }
+        .lottie-overlay {
+    position: fixed;
+    top: 70%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 500px; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
+    border: none; /* Remove default iframe border */
+    z-index: 1000; /* Ensure overlay is above other content */
+    
+    border-radius: 10px 0 0 10px; /* Optional: Add rounded corners */
+}
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">DonateNow</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <a href="#login" class="btn login-btn">Login/Register</a>
+        </nav>
+    </header>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="assests/b1.jpg" alt="Image 1" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="slide">
+                <img src="assests/b2.jpg" alt="Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="slide">
+                <img src="assests/b3.jpg" alt="Image 3" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+        
+        <a href="#donate" class="btn slider-btn">Donate Now</a>
+        <a href="#about" class="btnn slider-btnn">Learn More</a>
+    </div>
+    <main>
+        <iframe src="https://lottie.host/embed/acf92115-60ad-47d9-9a1e-5a600ff61d35/rfy98DZtWN.json" class="lottie-overlay"></iframe>
+        <section id="home" class="hero-section">
+            <h1>Welcome to DonateNow</h1>
+            <p>Your small help can make a big difference.</p>
+            
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>DonateNow is a non-profit organization dedicated to making a positive impact in the world. <br> Our mission is to support various causes such as education, healthcare, and disaster relief through generous donations from people like you. <br> We believe that small contributions can lead to significant changes, and together, we can create a better future for everyone.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are a non-profit organization dedicated to making the world a better place through donations and community support.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 DonateNow. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            const offset = index * -100; // Offset by 100% for each slide
+            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides; // Loop back to first slide
+            showSlide(currentIndex);
+        }
+
+        // Start the slider
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+</html>
